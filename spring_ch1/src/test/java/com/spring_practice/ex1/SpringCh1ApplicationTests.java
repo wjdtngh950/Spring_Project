@@ -8,7 +8,7 @@ class SpringCh1ApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println("contextLoads...>ㅁ<");
+        System.out.println("hi my friend");
     }
 
 }
