@@ -4,6 +4,9 @@ import com.spring_pracrice.ex2.entity.Memo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.util.Optional;
 import java.util.stream.IntStream;
@@ -39,5 +42,12 @@ public class MemoRepositoryTests {
             Memo memo = result.get();
             System.out.println(memo);
         }
-    
+    }
+
+    @Test
+    public void testPageDefault(){
+        Pageable pageable = PageRequest.of(0,10);
+        Page<Memo> result = memoRepository.findAll(pageable);
+        System.out.println(result);
+    }
 }
