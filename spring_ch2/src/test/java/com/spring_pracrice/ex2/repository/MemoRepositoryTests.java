@@ -55,6 +55,7 @@ public class MemoRepositoryTests {
         System.out.println("Page Number: " + result.getNumber());
         System.out.println("Page Size: " + result.getSize());
         System.out.println("has next page?: " + result.hasNext());
+        System.out.println("first page?: " + result.isFirst());
     }
 
 
