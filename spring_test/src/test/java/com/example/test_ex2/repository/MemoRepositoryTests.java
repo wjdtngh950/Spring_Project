@@ -16,7 +16,7 @@ public class MemoRepositoryTests {
     MemoRepository memoRepository;
 
     @Test
-    public void testclass(){
+    public void testclass() {
         System.out.println(memoRepository.getClass().getName());
 
     }
@@ -29,8 +29,7 @@ public class MemoRepositoryTests {
             memoRepository.save(memo);
         });
     }*/
-    @Transactional
-    @Test
+    /*@Test
     public void testSelect(){
         Long mno = 100L;
         Optional<Memo> result = memoRepository.findById(mno);
@@ -39,5 +38,19 @@ public class MemoRepositoryTests {
             Memo memo =result.get();
             System.out.println(mno);
         }
+    }*/
+   /* @Transactional
+    @Test
+    public void testSelect2(){
+        Long mno = 100L;
+        Memo memo = memoRepository.getOne(mno);
+        System.out.println("=============================================");
+        System.out.println(mno);
+    }*/ //이 부분이 안됨
+    @Test
+    public void testUpdate(){
+        Memo memo = Memo.builder().mno(100L).memoText("Update Text").build();
+
+        System.out.println(memoRepository.save(memo));
     }
 }
