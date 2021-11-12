@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
@@ -63,8 +64,9 @@ public class MemoRepositoryTests {
     public void testSort(){
         Sort sort1 = Sort.by("mno").descending();
         Pageable pageable = PageRequest.of(0, 20, sort1);
-        Page<Memo> result = memoRepository.findAll(pageable);
-        result.get().forEach(memo->{
+//        Page<Memo> result = memoRepository.findAll(pageable);
+        List<Memo> result = memoRepository.findByMnoBetweenOrderByMnoDesc(10L, 20L);
+        result.forEach(memo->{
             System.out.println(memo);
         });
         }
