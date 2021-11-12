@@ -62,11 +62,10 @@ public class MemoRepositoryTests {
     @Test
     public void testSort(){
         Sort sort1 = Sort.by("mno").descending();
-        Pageable pageable = PageRequest.of(0, 10, sort1);
+        Pageable pageable = PageRequest.of(0, 20, sort1);
         Page<Memo> result = memoRepository.findAll(pageable);
         result.get().forEach(memo->{
             System.out.println(memo);
         });
-
         }
     }
