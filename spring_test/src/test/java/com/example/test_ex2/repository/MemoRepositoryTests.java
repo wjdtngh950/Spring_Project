@@ -69,7 +69,7 @@ public class MemoRepositoryTests {
         Page<Memo> result = memoRepository.findAll(pageable);
 
         System.out.println(result);
-        .
+        
     }
 
 }
