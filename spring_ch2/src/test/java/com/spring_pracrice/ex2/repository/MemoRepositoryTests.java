@@ -65,7 +65,7 @@ public class MemoRepositoryTests {
         Sort sort1 = Sort.by("mno").descending();
         Pageable pageable = PageRequest.of(0, 20, sort1);
 //        Page<Memo> result = memoRepository.findAll(pageable);
-        List<Memo> result = memoRepository.findByMnoGreaterThanEqualOrderByMnoDesc(185L);
+        List<Memo> result = memoRepository.getListDesc();
         result.forEach(memo->{
             System.out.println(memo);
         });
