@@ -16,7 +16,7 @@ public class SampleController {
         //데이터베이스에서 데이터를 읽어서 화면에 보여줄 때
        //게시판 읽을 때나 조회할때
 
-    @Po
+    @PostMapping("/ex1")
     public void postEx1(){
         log.info("post ex1.............................");
     }
