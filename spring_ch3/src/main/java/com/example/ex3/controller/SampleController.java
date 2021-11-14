@@ -23,8 +23,7 @@ public class SampleController {
     //데이터베이스에 데이터를 넣을 때
     // 글쓰기 버튼을 누르고 글을 등록할 때
 
-    @PutMapping("/ex1")
-    public void putEx1(){
+    @PutM
         log.info("put ex1.............................");
     }
     //서버에서 수정할 때
