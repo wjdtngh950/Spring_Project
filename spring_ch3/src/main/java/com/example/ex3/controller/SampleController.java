@@ -32,7 +32,7 @@ public class SampleController {
 
     @DeleteMapping("/ex1")
     public void deleteEx1(){
-      
+        log.info("delete ex1.............................");
 
         // 지울때
         //글 삭제할 때
