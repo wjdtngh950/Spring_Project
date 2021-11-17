@@ -16,7 +16,12 @@ public class SampleController {
         //데이터베이스에서 데이터를 읽어서 화면에 보여줄 때
        //게시판 읽을 때나 조회할때
 
-
+    @PostMapping("/ex1")
+    public void postEx1(){
+        log.info("post ex1.............................");
+    }
+    //데이터베이스에 데이터를 넣을 때
+    // 글쓰기 버튼을 누르고 글을 등록할 때
 
     @PutMapping("/ex1")
     public void putEx1(){
