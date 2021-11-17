@@ -30,9 +30,7 @@ public class SampleController {
     //서버에서 수정할 때
     //내가 쓴 글 -> 수정하거나 변경할 때
 
-    @DeleteMapping("/ex1")
-    public void deleteEx1(){
-        log.info("delete ex1.............................");
+    @Delete ex1.............................");
 
         // 지울때
         //글 삭제할 때
