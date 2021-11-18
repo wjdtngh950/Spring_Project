@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/sample")
 @Log4j2
+
+public class SampleController {
+    @GetMapping("/ex1")
+    public void getEx1() {
         log.info("get ex1.............................");
     }
         //데이터베이스에서 데이터를 읽어서 화면에 보여줄 때
