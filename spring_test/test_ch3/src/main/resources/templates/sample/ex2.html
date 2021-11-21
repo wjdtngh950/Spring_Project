@@ -7,9 +7,16 @@
 <body>
 
 <u1>
+  <!--<li th:each="dto, state : ${list}">
+    [[${state.index}]] >>> [[${dto}]]
+  </li> 앞 번호매기기-->
+  <!--<li th:each="dto, state : ${list}" th:if="${dto.sno % 5==0}">
+[[${dto}]]
+</li> 5의 배수만 출력-->
   <li th:each="dto, state : ${list}" th:if="${dto.sno % 5==0}">
-  [[${dto}]]
-  </li>
+[[${dto}]]
+</li>
+
 </u1>
 
 </body>
