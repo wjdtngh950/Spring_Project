@@ -74,8 +74,7 @@ public class MemoRepositoryTests {
         System.out.println("Total Count: " + result.getTotalElements());
         System.out.println("Page Number: " + result.getNumber());
         System.out.println("Page Size: " + result.getSize());
-        System.out.println("has next page?: " + result.hasNext());
-        System.out.println("first page?: " + result.isFirst());
+        System.out.println("has n?: " + result.isFirst());
         System.out.println("--------------------------------------------");
         for(Memo memo : result.getContent()){
             System.out.println(memo);
