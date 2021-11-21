@@ -7,8 +7,8 @@
 <body>
 
 <u1>
-  <li th:each="dto, state : ${list}">
-    [[${state.index}]] --- [[${dto}]]
+  <li th:each="dto, state : ${list}" th:if="${dto.sno % 5==0}">
+  [[${dto}]]
   </li>
 </u1>
 
