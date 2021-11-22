@@ -7,14 +7,13 @@
 <body>
 <ul>
     <!--<li th:each="dto : ${list}">
-        [[${dto}]]
-    </li>-->
-
-    <!--<li th:each="dto, state : ${list}">
+         [[${dto}]]
+     </li>
+    <li th:each="dto, state : ${list}">
         [[${state.index}]] --- [[${dto}]]
-    </li>-->
+    </li> -->
 
-    <li th:each="dto, state : ${list}" th:if="${dto.sno % 5 ==0}">
+    <li th:each="dto, state : ${list}" th:if="${dto.sno % 5 == 0}">
         [[${dto}]]
     </li>
 </ul>
