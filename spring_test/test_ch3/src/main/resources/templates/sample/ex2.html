@@ -7,9 +7,8 @@
 <body>
 
 <ul>
- <li th:each="dto, state : ${list}" >
-   <span th:if="${dto.sno % 5 ==0}" th:text="${'----------'+dto.sno}"></span>
-   <span th:unless="${dto.sno % 5 ==0}" th:text="${dto.first}"></span>
+ <li th:each="dto, state : ${list}" th:text="${dto.sno % 5 ==0}? ${dto.sno}: ${dto.first}">
+
  </li>
 </ul>
 </body>
