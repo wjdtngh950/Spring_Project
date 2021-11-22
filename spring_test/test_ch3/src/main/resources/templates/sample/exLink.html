@@ -6,7 +6,7 @@
 </head>
 <body>
 <li th:each="dto : ${list}">
-   [[${#numbers.formatInteger(dto.sno,10)}]]
+   [[$[dto.sno}]] --- [[${#numbers.formatInteger(dto.regTime,'yyyy/mm/dd)}]]
 </li>
 
 </body>
