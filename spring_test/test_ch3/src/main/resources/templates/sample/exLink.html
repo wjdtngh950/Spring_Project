@@ -6,7 +6,7 @@
 </head>
 <body>
 <li th:each="dto : ${list}">
-    <a th:href="@{/sample/exView}">[[${dto}]]</a>
+    <a th:href="@{/sample/exView(sno=${dto.sno})}">[[${dto}]]</a>
 </li>
 
 </body>
