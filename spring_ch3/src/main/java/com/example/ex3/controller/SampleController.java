@@ -46,7 +46,7 @@ public class SampleController {
         //글 삭제할 때
     }
 
-    @GetMapping({"/ex2"})
+    @GetMapping({"/ex2", "/exLink"})
     public void exModel(Model model) {
         List<SampleDTO> list = IntStream.rangeClosed(1, 20).asLongStream().mapToObj(i ->
         {
