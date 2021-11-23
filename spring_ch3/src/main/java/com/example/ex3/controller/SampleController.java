@@ -62,7 +62,7 @@ public class SampleController {
     }
 
     @GetMapping({"/exInline"})
-    public String exInline(RedirectAttributes redirectAttributes){
+    public String exInline(RedirectAttributes redirectAttributes) {
         log.info("exInline....................");
 
         SampleDTO dto = SampleDTO.builder()
@@ -79,9 +79,12 @@ public class SampleController {
     }
 
     @GetMapping("/ex3")
-    public void ex3(){
+    public void ex3() {
         log.info("ex3");
     }
+
+
+    
 }
 
 
