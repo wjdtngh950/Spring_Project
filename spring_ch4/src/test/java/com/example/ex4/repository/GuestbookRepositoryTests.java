@@ -63,7 +63,9 @@ public class GuestbookRepositoryTests {
         BooleanExpression expression1 = qGuestbook.title.contains(keyword); //3
         BooleanExpression expression2 = qGuestbook.writer.contains(username);
 
-        builder.and(expression2); //4
+        builder.and(expression1); //4
+
+        builder.and(expression2);
 
         Page<Guestbook> result = guestbookRepository.findAll(builder, pageable); //5
 
