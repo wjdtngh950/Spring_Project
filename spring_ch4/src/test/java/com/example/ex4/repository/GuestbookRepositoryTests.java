@@ -56,11 +56,14 @@ public class GuestbookRepositoryTests {
 
         String keyword = "1";
 
+        String username = "user0";
+
         BooleanBuilder builder = new BooleanBuilder(); //2
 
-        BooleanExpression expression = qGuestbook.title.contains(keyword); //3
+        BooleanExpression expression1 = qGuestbook.title.contains(keyword); //3
+        BooleanExpression expression2 = qGuestbook.writer.contains(username);
 
-        builder.and(expression); //4
+        builder.and(expression2); //4
 
         Page<Guestbook> result = guestbookRepository.findAll(builder, pageable); //5
 
