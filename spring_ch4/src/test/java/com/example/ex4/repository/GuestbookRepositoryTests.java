@@ -61,11 +61,11 @@ public class GuestbookRepositoryTests {
         BooleanBuilder builder = new BooleanBuilder(); //2
 
         BooleanExpression expression1 = qGuestbook.title.contains(keyword); //3
-        BooleanExpression expression2 = qGuestbook.writer.contains(username);
+        BooleanExpression expression2 = qGuestbook.writer.contains(username); // 불리언 -> 익스프레션을 저장하는 저장소
 
         builder.and(expression1); //4
 
-        builder.and(expression2);
+        builder.and(expression2); // or면 둘중 하나 충족하면 나옴, 이렇게 엔드나 or로 묶어서 최종적으로 원하는 결과를 만듬
 
         Page<Guestbook> result = guestbookRepository.findAll(builder, pageable); //5
 
