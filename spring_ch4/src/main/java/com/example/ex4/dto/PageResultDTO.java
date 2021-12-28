@@ -19,8 +19,15 @@ public class PageResultDTO<DTO, EN> {
     private int size;
 
     //시작 페이지번호, 끝 페이지번호
+    private int start, end;
 
-    private List<DTO> dtoList;
+    //이전, 다음
+    private boolean prev, next;
+
+    //페이지 번호 목록
+
+    private List<Integer> pageList;
+    
     public PageResultDTO(Page<EN> result, Function<EN, DTO> fn){
 
         dtoList = result.stream().map(fn).collect(Collectors.toList());
