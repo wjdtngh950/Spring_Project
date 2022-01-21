@@ -26,7 +26,7 @@ public class PageResultDTO<DTO, EN> {
     private int size;
 
     //시작 페이지번호, 끝 페이지번호
-    private in;
+    private int start, end;
 
     //이전, 다음
     private boolean prev, next;
