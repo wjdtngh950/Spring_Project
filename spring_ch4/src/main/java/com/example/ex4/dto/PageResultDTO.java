@@ -23,7 +23,7 @@ public class PageResultDTO<DTO, EN> {
     //현재페이지번호
     private int page;
     //목록 사이즈
-    private int s
+    private int size;
 
     //시작 페이지번호, 끝 페이지번호
     private int start, end;
