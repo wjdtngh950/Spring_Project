@@ -43,6 +43,7 @@ public class GuestbookServiceImpl implements GuestbookService {
 
         Page<Guestbook> result = repository.findAll(pageable);
 
+        // TODO: 람다식 찾아보기
         Function<Guestbook, GuestbookDTO> fn = (entity -> entityToDto(entity));
 
         return new PageResultDTO<>(result, fn );
