@@ -1,10 +1,11 @@
 package com.suho.suhoex1.controller;
 
+import com.suho.suhoex1.dto.MemoDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDateTime;
 
 
 @Slf4j
@@ -12,8 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class MemoController {
 
-    @GetMapping("/test")
-    public void testController(){
-        log.info("요청 성공");
+    @PostMapping("/memos")
+    public MemoDto createMemo(
+            @RequestParam(value = "memo")String memo,
+            @RequestParam(value = "name") String name
+    ){
+
+        return MemoDto.builder()
+                .content(memo)
+                .writer(name)
+                .createdDate(LocalDateTime.now())
+                .updatedDate(LocalDateTime.now())
+                .build();
   }
 }
